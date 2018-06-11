@@ -1,0 +1,36 @@
+<md-dialog aria-label="Mango (Fruit)">
+    <form ng-cloak>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>Would you like to make them available to the research community?</h2>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="cancel()">
+                    <md-icon aria-label="Close dialog"><i class="material-icons">close</i></md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+
+        <md-dialog-content>
+            <div class="md-dialog-content">
+                <md-radio-group ng-model="data.yes">
+                    <md-radio-button value="Yes"  ng-click="changeRadio($value)" >Yes</md-radio-button>
+                    <md-radio-button value="No" ng-click="changeRadio($value)">No, use my license:</md-radio-button>
+                </md-radio-group>
+            </div>
+
+        <md-input-container class="md-block">
+            <label>License</label>
+            <textarea ng-disabled="radio"  ng-model="license" md-maxlength="150" rows="5" md-select-on-focus></textarea>
+        </md-input-container>
+        </md-dialog-content>
+        <md-dialog-actions layout="row">
+            <md-button ng-click="answer()" md-autofocus>
+                Submit
+            </md-button>
+            <span flex></span>
+            <md-button ng-click="cancel()">
+                Cancel
+            </md-button>
+        </md-dialog-actions>
+    </form>
+</md-dialog>

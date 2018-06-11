@@ -1,0 +1,277 @@
+.margin-top-5 {
+	margin-top: 0px;
+}
+
+
+body, html {
+    height: 100%;
+}
+
+.panel-scroll {
+	/*height: 300px;*/
+	overflow-y: auto;
+}
+
+.result-map {
+  height: 100%;
+  width: 100%;
+}
+
+
+
+.menu-button{
+	height: 40px;
+  	width: 40px !important;
+}
+
+.left-bar-form{
+	margin-top:10px;
+}
+
+.inline-label {
+    /* Other styling.. */
+    text-align: right;
+    clear: both;
+    float:left;
+    margin-right:15px;
+}
+
+.info{
+	  width: 100%;
+}
+
+.input-label{
+	margin-top:5px;
+}
+
+.zones{
+	margin: 0, 10px, 0, 10px;
+	padding:0;
+}
+
+
+.sidebar{
+	width:120% !important;
+	border-right: 1px solid transparent;
+	
+}
+
+.hidden-map{
+	display: none;
+}
+
+.capsella-icon{
+	height:60px;
+}
+
+.navbar-style{
+	position: relative;
+	min-height: 20px;
+	margin-bottom: 0px !important;	
+	height:50px;	
+	background-color:#10274c;
+	color:white !important;
+	display:inline-block;	
+	width:100%;
+}
+
+.inline{
+	float:left;
+	display: inline;
+}
+
+
+.left{
+	margin-left:10px;
+	padding: 10px 0;
+}
+
+.right{
+	float:right;
+	margin-right:10px;
+	padding: 10px 0;
+}
+
+.navbar {
+    position: relative;
+}
+.brand {
+    position: absolute;
+    left: 50%;
+    margin-left: -100px !important;  /* 50% of your logo width */
+    display: block;
+    margin-top:15px;
+}
+
+.center{
+	display: block;
+	border-radius: 6px;
+ 	margin: 0 auto;
+    }
+
+.result-style{
+	margin: auto;
+    width: 50%;
+}
+
+.nav-text{
+	color:white !important;
+}
+
+.text-input{
+	 max-width: 30%;
+	 margin-right:10px;
+	 margin-top:0px;
+	 margin-bottom:0px;
+}
+
+.text-input-layer{
+	 max-width: 60%;
+	 margin-right:10px;
+	 margin-top:0px;
+	 margin-bottom:0px;
+}
+.link{
+	color:#bab8b8;
+}
+
+.main-button{
+	width:90%;
+	line-height:10px;
+	text-align:right;
+	margin: 0 auto;
+	background-color: #399667 !important;
+	display: block;
+}
+
+.green-color{
+		background-color: #399667 !important;
+}
+
+p{
+	margin: 0, 10px, 0, 10px;
+
+}
+.no-margin{
+	margin-top:0;
+	margin-bottom:0;
+}
+
+.back-button{
+	width:100%;
+	margin:0;
+	background-color: #399667 !important;	
+	margin-top:-5dp;
+}
+
+.save-button{
+	margin-top:20px;
+	margin-left:20px;
+}
+
+label{
+	margin:10px;
+}
+
+.data-show{
+	margin-left:40px;
+}
+
+.footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 70px;
+    width: 100%;
+    overflow:hidden;
+   background-color:#10274c;
+    
+}
+#footer-logos div{
+  display: inline-block;
+}
+
+#footer-logos {
+	margin:0 auto;
+	margin-top:5px;
+		margin-bottom:5px;
+	
+  display: inline-block;
+  background-color:white;
+  border: 1px solid grey;
+  border-radius: 6px;
+}
+
+.side-r-container{
+	padding-bottom:90px;
+	height:calc(100% - 30px);
+	overflow:auto;
+}
+
+.side-container {	
+	height:calc(100% - 30px);	
+}
+
+.main-content {
+	height: calc(100% - 70px);
+
+}
+
+
+.div-loader {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:1000;
+    background-color:grey;
+    opacity: .8;
+ }
+
+.ajax-loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -32px; /* -1 * image width / 2 */
+    margin-top: -32px;  /* -1 * image height / 2 */
+    display: block;
+}
+
+.ol-mycontrol {
+    background-color:#10274c;
+    border-radius: 4px;
+    padding: 4px;
+    position: absolute;
+    width:285px;
+    top: 5px;
+    right:40px;
+}
+
+.toolButton {
+    background-color:  #399667;
+    color: white;
+    border-radius: 4px;
+    width: 5em;
+    margin: 0.2em;
+}
+
+.toolSelect {
+    border-radius: 4px;
+    margin:0.2em;
+}
+
+.rubber-cursor{
+    cursor: url('../images/if_eraser.png'), auto;
+}
+
+.pencil-cursor{
+    cursor: url('../images/if_pencil.png') 3 22,auto;
+
+}
+
+.success{
+    border-radius: 4px 4px 0 0;
+    background:#399667;
+    color:white;
+}

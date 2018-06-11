@@ -1,0 +1,35 @@
+.square {
+  float: left;
+  width: 10px;
+  height: 80px;
+  margin: 0 10px 0 10px;
+  border: 1px solid rgba(0, 0, 0, .2);
+}
+
+.red {
+  background: #bc0508;
+}
+
+.orange {
+  background: #ce6700;
+}
+
+.yellow {
+  background: #ffcf4c;
+}
+
+.green {
+  background: #4baf69;
+}
+
+.dark-green {
+  background: #02872a;
+}
+
+#file_upload {
+    display: none;
+}
+
+.container{
+    padding: 1em;
+}

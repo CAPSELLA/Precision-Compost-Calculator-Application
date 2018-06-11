@@ -1,0 +1,113 @@
+
+
+<md-button class="md-primary md-raised demo-dialog-open-button	back-button text-right"
+	 ng-click="back($event)">
+Recalculate<span class="glyphicon glyphicon-chevron-left"></span> </md-button>
+
+<md-content class="left-bar-form side-r-container" flex layout-padding>
+
+
+
+<div class="sidebar-form">
+
+	<div layout="column">
+		<label>Suggested Total compost</label>
+		<div layout="column" class="data-show" >
+
+
+			<div layout="row" >
+				<p>Total subparcel compost: <b>{{getTotal()}}</b> tons</p>
+			</div>
+		</div>
+	</div>
+
+	<form name="compostCalculation">
+	
+		<div layout="row">
+			<div layout-gt-md="column">
+				<div layout="row">
+					<h4>{{parcelName}}</h4>
+				</div>
+				<div layout="row">
+					<h5>View calculated results for parcel</h5>
+				</div>
+			</div>
+
+			<div layout-gt-md="column">
+
+				<div class="btn-group save-button">
+					<button type="button" id="saveBtn" class="btn btn-success green-color" ng-click="save($event)"  data-ng-disabled="checkSave()">{{status ? status : 'Save'}}</button>
+					<button type="button" class="btn btn-success dropdown-toggle green-color"
+						data-toggle="dropdown">
+						<span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu" role="menu">
+						<li ng-repeat="action in actions">
+						  <a href="" ng-click="setAction(action)">{{action.name}}</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		</form>
+		<hr/>
+
+		<div  layout layout-align="left" >
+			<div layout="column">
+				<label>Total compost input</label>
+				<div layout="column" class="data-show" >
+
+				<div layout="row" >
+					<p>Total area: <b>{{totalArea}}</b> Hectares</p>
+					</div>
+					<!--<div layout="row" >-->
+
+						<!--<p>Total planned compost: <b>{{totalCompost}}</b> tons</p>-->
+					<!--</div>-->
+				</div>
+			</div>
+		</div>
+
+
+		<div layout layout-align="left" class="zones"
+			ng-repeat="result in results">
+				<div class="square {{result.color}}"></div>
+				<div layout="column">
+					<div layout="row" class="no-margin">
+				<label>{{result.name}} zone Input</label>
+				</div>
+			<div layout="column" flex class="form-group no-margin">
+				<div layout="row">
+					<p class="no-margin">Zone area: {{result.area}} Hectares</p>
+				</div>
+				<div layout="row">
+					<p class="no-margin">Suggested compost: <b>{{result.totalCompostZone}}</b> tons</p>
+				</div>
+				<br class="no-margin">
+			</div>
+			</div>
+		</div>
+
+
+	</div>
+
+</md-content>
+
+
+<div class="modal fade" id="successModal" role="dialog" ng-controller="ResultsController">
+	<div class="modal-dialog">
+
+		<!-- Modal content-->
+		<div class="modal-content">
+			<div class="modal-header success">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Task Map successfully saved on Server</h4>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Ok</button>
+			</div>
+		</div>
+
+	</div>
+</div>

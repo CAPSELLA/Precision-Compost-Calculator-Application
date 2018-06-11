@@ -1,0 +1,50 @@
+<style>
+.user {
+	font-weight: bold;
+}
+
+.logout {
+	cursor: pointer;
+	margin-left: 5px;
+}
+
+.md-button {
+	min-height: 1%;
+	min-width: 1%;
+	height: 30px;
+}
+
+</style>
+
+<nav class="navbar navbar-default navbar-static-top navbar-style nav-text no_margin">
+    <p class="inline left">Compost Calculator</p>
+
+    <a class="navbar brand inline" ui-sref="home"> <img
+            class="png-icon capsella-icon center" src="./app/images/CapsellaLogov2_5.jpg"></a>
+
+
+    <div ng-if="user.email != undefined">
+        <li class="inline right"><span class="user">
+							{{user.email}}</span> <span>|</span> <a href=""><a href="#/logout">
+            <span ng-click="logout()" class="nav-text logout">Logout</span></a>
+        </a></li>
+        <li ng-show="!user.email"><a ui-sref="register">Sign up</a></li>
+    </div>
+    <div ng-if="user.name != undefined">
+        <li class="inline right"><span class="user">
+							{{user.name}}</span> <span>|</span> <a href=""><a href="#/logout">
+            <span ng-click="logout()" class="nav-text logout">Logout</span></a>
+        </a></li>
+        <li ng-show="!user.email"><a ui-sref="register">Sign up</a></li>
+    </div>
+    <div class="right" ng-if="user.email == undefined && user.name == undefined">
+        <li class="inline logout right"><a href="#/login"> <span
+                class="nav-text">Login</span>
+        </a> <span>|</span> <a href="#/register"> <span class="nav-text"
+        >Sign up</span>
+            <!-- href="https://capsella-services.madgik.di.uoa.gr:8443/capsella_authentication_service/#/register"-->
+        </a></li>
+    </div>
+    <!--/.nav-collapse -->
+</nav>
+
